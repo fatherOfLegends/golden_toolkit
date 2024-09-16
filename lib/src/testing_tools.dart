@@ -1,11 +1,3 @@
-/// ***************************************************
-/// Copyright 2019-2020 eBay Inc.
-///
-/// Use of this source code is governed by a BSD-style
-/// license that can be found in the LICENSE file or at
-/// https://opensource.org/licenses/BSD-3-Clause
-/// ***************************************************
-
 //ignore_for_file: deprecated_member_use_from_same_package
 
 import 'dart:async';
@@ -121,10 +113,9 @@ Future<void> _pumpAppWidget(
   required double textScaleSize,
 }) async {
   await tester.binding.setSurfaceSize(surfaceSize);
-  tester.binding.window.physicalSizeTestValue = surfaceSize;
-  tester.binding.window.devicePixelRatioTestValue = 1.0;
-  tester.binding.window.platformDispatcher.textScaleFactorTestValue =
-      textScaleSize;
+  tester.view.physicalSize = surfaceSize;
+  tester.view.devicePixelRatio = 1.0;
+  tester.platformDispatcher.textScaleFactorTestValue = textScaleSize;
 
   await tester.pumpWidget(
     DefaultAssetBundle(bundle: TestAssetBundle(), child: app),
@@ -205,8 +196,9 @@ Future<void> screenMatchesGolden(
   bool? autoHeight,
   Finder? finder,
   CustomPump? customPump,
-  @Deprecated('This method level parameter will be removed in an upcoming release. This can be configured globally. If you have concerns, please file an issue with your use case.')
-      bool? skip,
+  @Deprecated(
+      'This method level parameter will be removed in an upcoming release. This can be configured globally. If you have concerns, please file an issue with your use case.')
+  bool? skip,
 }) {
   return compareWithGolden(
     tester,
@@ -250,7 +242,7 @@ Future<void> compareWithGolden(
   RepaintBoundary, it should not matter */
   final actualFinder = finder ?? find.byWidgetPredicate((w) => true).first;
   final fileName = fileNameFactory(name, device);
-  final originalWindowSize = tester.binding.window.physicalSize;
+  final originalWindowSize = tester.view.physicalSize;
 
   if (!shouldSkipGoldenGeneration) {
     await tester.waitForAssets();
@@ -288,7 +280,7 @@ Future<void> compareWithGolden(
 
     final adjustedSize = Size(originalWindowSize.width, finalHeight);
     await tester.binding.setSurfaceSize(adjustedSize);
-    tester.binding.window.physicalSizeTestValue = adjustedSize;
+    tester.view.physicalSize = adjustedSize;
 
     await tester.pump();
   }
@@ -302,7 +294,7 @@ Future<void> compareWithGolden(
   if (autoHeight == true) {
     // Here we reset the window size to its original value to be clean
     await tester.binding.setSurfaceSize(originalWindowSize);
-    tester.binding.window.physicalSizeTestValue = originalWindowSize;
+    tester.view.physicalSize = originalWindowSize;
   }
 }
 
@@ -313,7 +305,7 @@ Future<void> compareWithGolden(
 /// See also:
 /// * [GoldenToolkitConfiguration.primeAssets] to configure a global asset prime function.
 Future<void> legacyPrimeAssets(WidgetTester tester) async {
-  final renderObject = tester.binding.renderView;
+  final renderObject = tester.binding.renderViews.first;
   assert(!renderObject.debugNeedsPaint);
 
   /* this should work but doesn't:

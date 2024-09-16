@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs
 import 'package:flutter/material.dart';
 
 /// Counter page from flutters default generated app
@@ -51,7 +52,7 @@ class _MyHomePageState extends State<_MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
         ),

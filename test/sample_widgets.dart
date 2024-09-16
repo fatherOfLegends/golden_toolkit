@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class WidgetWithShadows extends StatelessWidget {
-  const WidgetWithShadows({Key? key}) : super(key: key);
+  const WidgetWithShadows({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +20,10 @@ class WidgetWithShadows extends StatelessWidget {
             )
           ],
         ),
-        child: ClipRRect(
+        child: const ClipRRect(
           borderRadius: borderRadius,
           child: Column(
-            children: const [
+            children: [
               Padding(
                 padding: EdgeInsets.all(3),
                 child: Text('this is the content'),

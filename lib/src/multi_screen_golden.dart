@@ -1,11 +1,3 @@
-/// ***************************************************
-/// Copyright 2019-2020 eBay Inc.
-///
-/// Use of this source code is governed by a BSD-style
-/// license that can be found in the LICENSE file or at
-/// https://opensource.org/licenses/BSD-3-Clause
-/// ***************************************************
-
 //ignore_for_file: deprecated_member_use_from_same_package
 
 import 'package:flutter/material.dart';
@@ -55,8 +47,9 @@ Future<void> multiScreenGolden(
   CustomPump? customPump,
   DeviceSetup? deviceSetup,
   List<Device>? devices,
-  @Deprecated('This method level parameter will be removed in an upcoming release. This can be configured globally. If you have concerns, please file an issue with your use case.')
-      bool? skip,
+  @Deprecated(
+      'This method level parameter will be removed in an upcoming release. This can be configured globally. If you have concerns, please file an issue with your use case.')
+  bool? skip,
 }) async {
   assert(devices == null || devices.isNotEmpty);
   final deviceSetupPump = deviceSetup ?? _twoPumps;

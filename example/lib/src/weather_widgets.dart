@@ -1,11 +1,3 @@
-/// ***************************************************
-/// Copyright 2019-2020 eBay Inc.
-///
-/// Use of this source code is governed by a BSD-style
-/// license that can be found in the LICENSE file or at
-/// https://opensource.org/licenses/BSD-3-Clause
-/// ***************************************************
-
 // ignore_for_file: public_member_api_docs
 
 import 'package:flutter/material.dart';
@@ -42,7 +34,7 @@ class WeatherForecast extends StatelessWidget {
               const SizedBox(height: 48),
               Text(
                 'Today\'s Forecast',
-                style: theme.textTheme.headline6,
+                style: theme.textTheme.titleLarge,
               ),
               Container(
                 constraints: const BoxConstraints(minWidth: 100, maxWidth: 300),
@@ -53,8 +45,8 @@ class WeatherForecast extends StatelessWidget {
                       shape: const CircleBorder(),
                     ),
                     textTheme: theme.textTheme.copyWith(
-                      bodyText2:
-                          theme.textTheme.bodyText2!.copyWith(fontSize: 24),
+                      bodyMedium:
+                          theme.textTheme.bodyMedium!.copyWith(fontSize: 24),
                     ),
                   ),
                   child: WeatherCard.forecast(today),
@@ -69,7 +61,7 @@ class WeatherForecast extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Text('This Week\'s Forecast',
-                  style: Theme.of(context).textTheme.headline6),
+                  style: Theme.of(context).textTheme.titleLarge),
               if (MediaQuery.of(context).size.width > 400 &&
                   MediaQuery.of(context).size.height > 600)
                 WeeklyForecastExpanded(forecasts: _list)

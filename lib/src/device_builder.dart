@@ -1,11 +1,3 @@
-/// ***************************************************
-/// Copyright 2019-2020 eBay Inc.
-///
-/// Use of this source code is governed by a BSD-style
-/// license that can be found in the LICENSE file or at
-/// https://opensource.org/licenses/BSD-3-Clause
-/// ***************************************************
-
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -183,7 +175,7 @@ class DeviceScenarioWidget extends StatelessWidget {
             padding: device.safeArea,
             platformBrightness: device.brightness,
             devicePixelRatio: device.devicePixelRatio,
-            textScaleFactor: device.textScale,
+            textScaler: TextScaler.linear(device.textScale),
           );
 
           return MediaQuery(

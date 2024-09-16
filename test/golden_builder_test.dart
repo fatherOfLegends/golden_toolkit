@@ -1,11 +1,3 @@
-/// ***************************************************
-/// Copyright 2019-2020 eBay Inc.
-///
-/// Use of this source code is governed by a BSD-style
-/// license that can be found in the LICENSE file or at
-/// https://opensource.org/licenses/BSD-3-Clause
-/// ***************************************************
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:golden_toolkit/golden_toolkit.dart';
@@ -17,14 +9,14 @@ void main() {
         columns: 2,
         widthToHeightRatio: 1,
       )
-        ..addScenarioBuilder("Primary Color", (context) {
-          var color = Theme.of(context).colorScheme.primary;
+        ..addScenarioBuilder('Primary Color', (context) {
+          final color = Theme.of(context).colorScheme.primary;
           return Container(
             color: color,
           );
         })
-        ..addScenarioBuilder("Secondary Color", (context) {
-          var color = Theme.of(context).colorScheme.primary;
+        ..addScenarioBuilder('Secondary Color', (context) {
+          final color = Theme.of(context).colorScheme.primary;
           return Container(
             color: color,
           );
