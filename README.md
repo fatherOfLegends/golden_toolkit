@@ -1,7 +1,5 @@
 # Golden Toolkit
 
-[![Pub version](https://img.shields.io/pub/v/golden_toolkit.svg)](https://pub.dev/packages/golden_toolkit) [![Build Status](https://travis-ci.org/eBay/flutter_glove_box.svg?branch=master)](https://travis-ci.org/eBay/flutter_glove_box) [![codecov](https://codecov.io/gh/eBay/flutter_glove_box/branch/master/graph/badge.svg)](https://codecov.io/gh/eBay/flutter_glove_box)
-
 This project contains APIs and utilities that build upon [Flutter's Golden test](https://github.com/flutter/flutter/wiki/Writing-a-golden-file-test-for-package:flutter) functionality to provide powerful UI regression tests.
 
 It is highly recommended to look at sample tests here: [golden_builder_test.dart](test/golden_builder_test.dart)
@@ -370,7 +368,9 @@ See here as an example: [flutter_test_config.dart](test/flutter_test_config.dart
 
 ## License Information
 
-Copyright 2019-2020 eBay Inc.
+Copyright 2024 Larry McKenzie
+
+Copyright 2019-2024 eBay Inc.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are
@@ -382,7 +382,7 @@ met:
   copyright notice, this list of conditions and the following disclaimer
   in the documentation and/or other materials provided with the
   distribution.
-- Neither the name of eBay Inc. nor the names of its
+- Neither the names of the copyright holders nor the names of its
   contributors may be used to endorse or promote products derived from
   this software without specific prior written permission.
 
