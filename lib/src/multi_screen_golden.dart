@@ -54,7 +54,7 @@ Future<void> multiScreenGolden(
   assert(devices == null || devices.isNotEmpty);
   final deviceSetupPump = deviceSetup ?? _twoPumps;
   for (final device in devices ?? GoldenToolkit.configuration.defaultDevices) {
-    await tester.binding.runWithDeviceOverrides(
+    await tester.runWithDeviceOverrides(
       device,
       body: () async {
         if (overrideGoldenHeight != null) {

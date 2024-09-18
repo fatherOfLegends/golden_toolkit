@@ -45,7 +45,7 @@ void main() {
     );
 
     testGoldens('Pump widget traditionally', (tester) async {
-      tester.binding.window.devicePixelRatioTestValue = 1.0;
+      tester.view.devicePixelRatio = 1.0;
       await tester.binding.setSurfaceSize(const Size(200, 200));
       await tester.pumpWidget(squareContainer);
       await screenMatchesGolden(tester, 'square_container');
