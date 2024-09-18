@@ -1,4 +1,4 @@
-name: golden_toolkit
+name: golden_toolkit_fol_edition
 description: Common patterns for screenshot-based widget testing using Goldens.
 version: 0.16.0
 homepage: https://github.com/fatherOfLegends/golden_toolkit

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:golden_toolkit/src/testing_tools.dart';
+import 'package:golden_toolkit_fol_edition/src/testing_tools.dart';
 
 void main() {
   testGoldens('Custom Pump should be evaluated if supplied', (tester) async {

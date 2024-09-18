@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:golden_toolkit/golden_toolkit.dart';
+import 'package:golden_toolkit_fol_edition/golden_toolkit.dart';
 
 void main() {
   testGoldens('legacy static global configuration should still work',

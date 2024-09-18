@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:golden_toolkit/golden_toolkit.dart';
+import 'package:golden_toolkit_fol_edition/golden_toolkit.dart';
 
 class ImageWidget extends StatelessWidget {
   const ImageWidget({super.key});

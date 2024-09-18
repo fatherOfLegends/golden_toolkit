@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:golden_toolkit/src/test_asset_bundle.dart';
+import 'package:golden_toolkit_fol_edition/src/test_asset_bundle.dart';
 
 void main() {
   group('TestAssetBundle', () {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:golden_toolkit/golden_toolkit.dart';
+import 'package:golden_toolkit_fol_edition/golden_toolkit.dart';
 import 'package:test_api/src/backend/invoker.dart';
 
 import 'sample_widgets.dart';

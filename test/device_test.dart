@@ -1,7 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:golden_toolkit/golden_toolkit.dart';
+import 'package:golden_toolkit_fol_edition/golden_toolkit.dart';
 
 void main() {
   group('Device Tests', () {
